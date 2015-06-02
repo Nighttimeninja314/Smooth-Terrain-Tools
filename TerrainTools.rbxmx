@@ -961,7 +961,7 @@ do
 --       in the GUI, but still present in the
 --       code if someone wants to play with it.
 	-- vegetation mode
-	TerrainOptions.vegetationMode = false
+	TerrainOptions.vegetationMode = true
 	-- vegetation density
 	TerrainOptions.vegetationDensity = 1/100
 
@@ -1041,7 +1041,7 @@ local deactivatingEvent = Instance.new("BindableEvent")
 plugin.Deactivation:connect(function()
 	Off()
 end)
-local toolbar = plugin:CreateToolbar("Terrain")
+local toolbar = plugin:CreateToolbar("TerrainV2")
 local toolbarbutton = toolbar:CreateButton("New Smooth Terrain", "Terrain Generator", "")
 toolbarbutton.Click:connect(function()
 	if on then
